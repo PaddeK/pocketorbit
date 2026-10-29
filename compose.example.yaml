@@ -1,0 +1,22 @@
+# Run pocketorbit next to BookOrbit (or anywhere that can reach both BookOrbit and the internet).
+# Fill in the values below, or keep them in a .env file next to this one.
+services:
+  pocketorbit:
+    image: ghcr.io/paddek/pocketorbit:latest
+    restart: unless-stopped
+    volumes:
+      - pocketorbit-data:/data
+    environment:
+      # Your PocketBook Cloud login (the one the e-reader uses)
+      PB_EMAIL: ${PB_EMAIL}
+      PB_PASSWORD: ${PB_PASSWORD}
+      # BookOrbit address and the credentials from Settings > KOReader in BookOrbit.
+      # In the same Docker stack you can use the service name, e.g. http://bookorbit:3000
+      BOOKORBIT_URL: https://books.example.org
+      BOOKORBIT_USER: ${BOOKORBIT_USER}
+      BOOKORBIT_PASSWORD: ${BOOKORBIT_PASSWORD}
+      # How the e-reader shows up in BookOrbit
+      DEVICE_NAME: PocketBook Era Color
+
+volumes:
+  pocketorbit-data:

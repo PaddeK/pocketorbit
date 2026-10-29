@@ -1,0 +1,20 @@
+{
+    "name": "pocketorbit",
+    "version": "0.1.0",
+    "private": true,
+    "license": "MIT",
+    "repository": "github:PaddeK/pocketorbit",
+    "type": "module",
+    "scripts": {
+        "start": "bun src/index.ts",
+        "dev": "DATA_DIR=./data bun src/index.ts",
+        "once": "DATA_DIR=./data bun src/index.ts --once",
+        "build": "bun build src/index.ts --compile --minify --sourcemap --outfile dist/pocketorbit",
+        "test": "bun test",
+        "typecheck": "tsc --noEmit"
+    },
+    "devDependencies": {
+        "@types/bun": "^1.4.4",
+        "typescript": "^7.0.2"
+    }
+}
