@@ -1,5 +1,10 @@
 # pocketorbit
 
+> [!IMPORTANT]
+> **pocketorbit has moved into [orbitkit](https://github.com/PaddeK/orbitkit)** as its *PocketBook Sync* feature, and
+> this repository is archived. orbitkit is one image with opt-in features for BookOrbit; its README explains how to
+> move your settings (`POCKETBOOK_SYNC_*`) and data, so nothing is synced twice.
+
 Keeps [BookOrbit](https://bookorbit.app) up to date with what you read in the **built-in reader of a PocketBook**
 e-reader, without KOReader or anything else installed on the device.
 
